@@ -1,3 +1,4 @@
+# Write your code here :-)
 # imports libraries used in code
 import time
 import board
@@ -35,16 +36,25 @@ Right_Motor_speed = 0
 while True:
 
 # tells left motor to pin forward and the back
+
+    time.sleep(4)
     Left_Motor_speed = -1
     Left_Motor.throttle = Left_Motor_speed
-    time.sleep(2)
-    Left_Motor_speed = 1
-    Left_Motor.throttle = Left_Motor_speed
-    time.sleep(2)
-# tells right motor to spin forward and then back
     Right_Motor_speed = -1
     Right_Motor.throttle = Right_Motor_speed
-    time.sleep(2)
+    time.sleep(4)
     Right_Motor_speed = 1
     Right_Motor.throttle = Right_Motor_speed
-    time.sleep(2)
+    Left_Motor_speed = 1
+    Left_Motor.throttle = Left_Motor_speed
+    time.sleep(4)
+    Left_Motor_speed = 1
+    Left_Motor.throttle = Left_Motor_speed
+    Right_Motor_speed = -1
+    Right_Motor.throttle = Right_Motor_speed
+    time.sleep(4)
+    Left_Motor_speed = -1
+    Left_Motor.throttle = Left_Motor_speed
+    Right_Motor_speed = 1
+    Right_Motor.throttle = Right_Motor_speed
+
