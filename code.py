@@ -33,28 +33,40 @@ pwm_Lb = pwmio.PWMOut(right_backward, frequency=10000)
 Right_Motor = motor.DCMotor(pwm_La, pwm_Lb)
 Right_Motor_speed = 0
 
+def forward():
+    Left_Motor_speed = -1
+    Left_Motor.throttle = Left_Motor_speed
+    Right_Motor_speed = -1
+    Right_Motor.throttle = Right_Motor_speed
+
+def backwards():
+    Right_Motor_speed = 1
+    Right_Motor.throttle = Right_Motor_speed
+    Left_Motor_speed = 1
+    Left_Motor.throttle = Left_Motor_speed
+
+def left():
+    Left_Motor_speed = 1
+    Left_Motor.throttle = Left_Motor_speed
+    Right_Motor_speed = -1
+    Right_Motor.throttle = Right_Motor_speed
+
+def right():
+    Left_Motor_speed = -1
+    Left_Motor.throttle = Left_Motor_speed
+    Right_Motor_speed = 1
+    Right_Motor.throttle = Right_Motor_speed
+
 while True:
 
 # tells left motor to pin forward and the back
-
+#forward
     time.sleep(4)
-    Left_Motor_speed = -1
-    Left_Motor.throttle = Left_Motor_speed
-    Right_Motor_speed = -1
-    Right_Motor.throttle = Right_Motor_speed
+    forward()
     time.sleep(4)
-    Right_Motor_speed = 1
-    Right_Motor.throttle = Right_Motor_speed
-    Left_Motor_speed = 1
-    Left_Motor.throttle = Left_Motor_speed
+    backwards
     time.sleep(4)
-    Left_Motor_speed = 1
-    Left_Motor.throttle = Left_Motor_speed
-    Right_Motor_speed = -1
-    Right_Motor.throttle = Right_Motor_speed
+    left()
     time.sleep(4)
-    Left_Motor_speed = -1
-    Left_Motor.throttle = Left_Motor_speed
-    Right_Motor_speed = 1
-    Right_Motor.throttle = Right_Motor_speed
+    right()
 
