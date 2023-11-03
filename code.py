@@ -1,4 +1,3 @@
-# Write your code here :-)
 
 # imports libraries used in code
 import time
@@ -64,14 +63,17 @@ def stop():
     Right_Motor_speed = 0
     Right_Motor.throttle = Right_Motor_speed
 
+
 while True:
-    forward()
-    time.sleep(1.8)
-    right()
-    time.sleep(.3)
-    forward()
-    time.sleep(2)
-    right()
-    time.sleep(.5)
-    stop()
+
+
     time.sleep(4)
+    forward()
+    time.sleep(4)
+    backwards()
+    time.sleep(4)
+    left()
+    time.sleep(4)
+    right()
+    time.sleep(4)
+    stop()
